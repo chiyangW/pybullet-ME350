@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-8-g78fed4e-dirty  Build Version: 1.6.8924.26967
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assembly_overall_v0.0.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.012879 -0.0135 -0.00029326"
+        rpy="0 0 0" />
+      <mass
+        value="0.13626" />
+      <inertia
+        ixx="4.2581E-05"
+        ixy="5.1136E-21"
+        ixz="2.4036E-08"
+        iyy="5.4484E-05"
+        iyz="3.3616E-07"
+        izz="6.6494E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_leg">
+    <inertial>
+      <origin
+        xyz="0.0083782 -0.00097556 -0.0012867"
+        rpy="0 0 0" />
+      <mass
+        value="0.0061572" />
+      <inertia
+        ixx="2.2499E-07"
+        ixy="-1.4572E-14"
+        ixz="7.0221E-08"
+        iyy="1.4353E-06"
+        iyz="-1.5993E-15"
+        izz="1.2919E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg"
+    type="revolute">
+    <origin
+      xyz="-0.010985 -0.0935 -0.0033489"
+      rpy="0 -0.0083976 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_leg" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_motor">
+    <inertial>
+      <origin
+        xyz="0.0117431609370559 -0.00392679780963535 0.0625677211557477"
+        rpy="0 0 0" />
+      <mass
+        value="0.00744670173231385" />
+      <inertia
+        ixx="4.349401547325E-06"
+        ixy="1.16908650938029E-10"
+        ixz="-5.9605417722078E-07"
+        iyy="4.50572616091561E-06"
+        iyz="-9.80980058831325E-11"
+        izz="5.30816144048294E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_motor"
+    type="revolute">
+    <origin
+      xyz="0.054389 -0.003 0.011168"
+      rpy="-3.1416 -0.37446 3.1416" />
+    <parent
+      link="right_leg" />
+    <child
+      link="right_motor" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.0193500305694465 0.0184991043568992 3.51077662982813E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0484551794528226" />
+      <inertia
+        ixx="1.82785286774476E-05"
+        ixy="-2.14596444280982E-11"
+        ixz="-1.46762948457622E-09"
+        iyy="3.14876177418613E-05"
+        iyz="1.33405516235463E-11"
+        izz="1.82798253984324E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel"
+    type="revolute">
+    <origin
+      xyz="0.037417 0.0015 0.093252"
+      rpy="0 -0.76161 0" />
+    <parent
+      link="right_motor" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg">
+    <inertial>
+      <origin
+        xyz="0.0083782 0.0039756 -0.0012867"
+        rpy="0 0 0" />
+      <mass
+        value="0.0061572" />
+      <inertia
+        ixx="2.2499E-07"
+        ixy="-1.4572E-14"
+        ixz="7.0221E-08"
+        iyy="1.4353E-06"
+        iyz="1.5993E-15"
+        izz="1.2919E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg"
+    type="revolute">
+    <origin
+      xyz="-0.010985 0.0695 -0.0033489"
+      rpy="0 0.01638 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_leg" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_motor">
+    <inertial>
+      <origin
+        xyz="0.0117431609370505 0.00692679780963534 0.062567721155764"
+        rpy="0 0 0" />
+      <mass
+        value="0.00744670173231385" />
+      <inertia
+        ixx="4.34940154732499E-06"
+        ixy="-1.16908650937643E-10"
+        ixz="-5.9605417722077E-07"
+        iyy="4.50572616091561E-06"
+        iyz="9.80980058851035E-11"
+        izz="5.30816144048292E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_motor"
+    type="revolute">
+    <origin
+      xyz="0.053903 0.003 0.011347"
+      rpy="-3.1416 -0.33131 3.1416" />
+    <parent
+      link="left_leg" />
+    <child
+      link="left_motor" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.01935 0.018499 3.4445E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.048455" />
+      <inertia
+        ixx="1.8278E-05"
+        ixy="-2.2047E-11"
+        ixz="1.2983E-09"
+        iyy="3.1488E-05"
+        iyz="1.3619E-11"
+        izz="1.828E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel"
+    type="revolute">
+    <origin
+      xyz="0.020945 0.0015 0.060707"
+      rpy="0 1.4429 -3.1416" />
+    <parent
+      link="left_motor" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_top">
+    <inertial>
+      <origin
+        xyz="0.0250206183459842 0.0015 -0.000559413785413816"
+        rpy="0 0 0" />
+      <mass
+        value="0.00172086992397043" />
+      <inertia
+        ixx="2.56463520901954E-08"
+        ixy="4.24186731456841E-23"
+        ixz="-1.062892032188E-08"
+        iyy="6.37532224326688E-07"
+        iyz="-9.7769479252199E-23"
+        izz="6.14467177122448E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_top.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_top.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_top"
+    type="revolute">
+    <origin
+      xyz="-0.065279 -0.0875 0.0082759"
+      rpy="3.1416 -0.1683 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_top" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_bottom">
+    <inertial>
+      <origin
+        xyz="0.00414810752214947 0.0015 0.0512842007199136"
+        rpy="0 0 0" />
+      <mass
+        value="0.00451046468572221" />
+      <inertia
+        ixx="4.13965246446439E-06"
+        ixy="5.32459474498724E-23"
+        ixz="-6.00834070146859E-07"
+        iyy="4.45226818044798E-06"
+        iyz="4.06013977068546E-22"
+        izz="3.19381413012173E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_bottom.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/right_bottom.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bottom"
+    type="revolute">
+    <origin
+      xyz="0 0.003 0"
+      rpy="0 0.19777 0" />
+    <parent
+      link="right_top" />
+    <child
+      link="right_bottom" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_top">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_top.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_top.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_top"
+    type="revolute">
+    <origin
+      xyz="-0.065067 0.0635 0.007114"
+      rpy="3.1416 -0.19192 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_top" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_bottom">
+    <inertial>
+      <origin
+        xyz="0.0041481 0.0015 0.051284"
+        rpy="0 0 0" />
+      <mass
+        value="0.0045105" />
+      <inertia
+        ixx="4.1397E-06"
+        ixy="7.2811E-22"
+        ixz="-6.0083E-07"
+        iyy="4.4523E-06"
+        iyz="1.565E-21"
+        izz="3.1938E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_bottom.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assembly_overall_v0.0.SLDASM/meshes/left_bottom.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bottom"
+    type="revolute">
+    <origin
+      xyz="0 -0.003 0"
+      rpy="0 0.15577 0" />
+    <parent
+      link="left_top" />
+    <child
+      link="left_bottom" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
